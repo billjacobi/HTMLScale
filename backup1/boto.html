@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>boto</title>
+    <style type="text/css"> 
+		<!--some style sheet stuff -->
+     </style> 
+	<p style="color:blue">Input variables to create Launch Config, Autoscale Group, etc.</p>
+  </head>
+  <body>
+
+    <script type="text/javascript" src="/botojs"></script>
+
+    <div>
+    <p>
+            <form id='uploadform' action="upload" method="post" enctype="multipart/form-data"  >
+                <p style="color:blue">AWS account info:</p>
+				akid: <input name="akid" type="text" value="<akid>" /> <br>
+				sac: <input name="sac" type="text" value="<sac>" /> <br><br>
+				<p style="color:blue">Autoconfig info:</p>
+				Launch Config: <input name="lcname" type="text" value="<lcname>" /> </br>
+                Auto-scaling Group: <input name="asgname" type="text" value="<autoscalinggroup>" /> <br>
+                AMI ID: <input name="amiid" type="text" value="<amiid>" /> <br><br>
+				<p style="color:blue">Load Balancer:</p>
+				Load Balancer: <input name="loadbalancer" type="text" value="<loadbalancer>" /> <br><br>				
+			<input type="submit" value="Submit Info">  
+			<p><input type="reset" value="Clear"/></p>
+			</form>
+			<label> loadbalancer: 
+					<select id="loadbalancer">
+						<option value=""></option>
+						<option value="WinBal">WinBal</option>
+						<option value="MyLoadBalancer">MyLoadBalancer</option>
+					</select>
+		    </label><br><br>
+    </p>
+	</div>
+
+  </body>
+</html>
